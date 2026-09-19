@@ -1,0 +1,229 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+
+  --color-ivory: #FAF8F5;
+  --color-cream: #F5EFEB;
+  --color-pearl: #FDFBF7;
+  --color-beige: #EFE8DE;
+  --color-beige-dark: #E2D7C7;
+  --color-champagne: #C8A870;
+  --color-champagne-light: #DFBE82;
+  --color-champagne-dark: #A98547;
+  --color-rose-gold: #D9A596;
+  --color-rose-gold-light: #E8BFB3;
+  --color-taupe: #786458;
+  --color-taupe-dark: #4A3D35;
+  --color-espresso: #3A2E26;
+}
+
+/* Luxury custom styles */
+html {
+  font-family: var(--font-sans);
+  background-color: #FAF8F5;
+  color: #4A3D35;
+}
+
+h1, h2, h3, .font-serif {
+  font-family: var(--font-serif);
+}
+
+/* Remove horizontal scrollbar lines from all carousels, marquees, and horizontal containers */
+.no-scrollbar,
+.carousel-no-scrollbar,
+.overflow-x-auto,
+.overflow-x-scroll,
+[data-no-scrollbar] {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+.no-scrollbar::-webkit-scrollbar,
+.carousel-no-scrollbar::-webkit-scrollbar,
+.overflow-x-auto::-webkit-scrollbar,
+.overflow-x-scroll::-webkit-scrollbar,
+[data-no-scrollbar]::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Hide all custom/default scroll indicators and side scrollbars on desktop and all devices without universal selector */
+html, body, .no-scrollbar, .carousel-no-scrollbar, .overflow-x-auto, .overflow-x-scroll, [data-no-scrollbar] {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Infinite Horizontal Marquee Animations with efficient hardware compositing */
+@keyframes marquee-scroll-left {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marquee-scroll-right {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-marquee-left {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll-left 50s linear infinite;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.animate-marquee-left:hover {
+  animation-play-state: paused;
+}
+
+.animate-marquee-right {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll-right 50s linear infinite;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.animate-marquee-right:hover {
+  animation-play-state: paused;
+}
+
+/* Layout containment on marquee cards to isolate rendering cost without layer explosion */
+.animate-marquee-left > *,
+.animate-marquee-right > * {
+  contain: content;
+}
+
+/* High Performance Rendering & GPU Hardware Acceleration */
+.gpu-layer {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.section-contain {
+  contain: layout style;
+}
+
+/* Desktop Hero Section & Scrolling Performance Optimization */
+@media (min-width: 1024px) {
+  /* 1. Desktop Hero Video: Strictly wrap video content with zero vertical padding/margin and no forced aspect ratio */
+  #hero {
+    position: relative !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    overflow: hidden !important;
+    width: 100% !important;
+    background: transparent !important;
+  }
+
+  #hero > div:first-of-type,
+  #hero .hero-media-container,
+  .hero-media-16-9 {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    aspect-ratio: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    overflow: hidden !important;
+    line-height: 0 !important;
+  }
+
+  #hero > div:first-of-type video,
+  #hero .hero-media-container video,
+  .hero-media-16-9 video {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    min-width: 100% !important;
+    min-height: 0 !important;
+    max-width: 100% !important;
+    max-height: none !important;
+    aspect-ratio: auto !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    vertical-align: top !important;
+  }
+
+  #hero .hero-overlay-content {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
+  /* 2. Desktop Hardware Acceleration & Repaint Optimization below 'WHY CHOOSE US' */
+  #why-us,
+  #dual-marquee,
+  #story,
+  #gallery,
+  #contact {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  /* Optimize off-screen rendering pipeline for smooth desktop scrolling */
+  #dual-marquee,
+  #story,
+  #gallery {
+    content-visibility: auto;
+    contain-intrinsic-size: 750px;
+  }
+
+  /* Strictly isolate marquee track overflows on desktop */
+  #dual-marquee .overflow-hidden {
+    contain: paint;
+  }
+
+  /* Remove costly backdrop-filter repaint overhead during desktop scrolling */
+  header.gpu-layer {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+}
