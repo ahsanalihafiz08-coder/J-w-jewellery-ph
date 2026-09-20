@@ -51,9 +51,9 @@ export const Hero: React.FC<HeroProps> = ({ onExplore, onBookConsultation, onSel
   };
 
   return (
-    <section id="hero" className="relative w-full bg-[#FAF8F5] border-b border-[#E8DFC8] lg:border-none m-0 p-0 lg:m-0 lg:p-0">
-      {/* 1. HERO VIDEO CONTAINER - STRICTLY WRAPS VIDEO CONTENT, ZERO VERTICAL SPACE ON DESKTOP */}
-      <div className="hero-media-container relative w-full h-screen lg:h-auto overflow-hidden m-0 p-0">
+    <section id="hero" className="w-full h-auto py-0 my-0 relative overflow-hidden">
+      {/* 1. HERO VIDEO CONTAINER - FULL VERTICAL ON MOBILE (min-h-[85vh]), STRICT ASPECT-VIDEO AUTO ON DESKTOP */}
+      <div className="hero-media-container relative w-full min-h-[85vh] md:min-h-0 md:h-auto overflow-hidden m-0 p-0">
         {/* Background Video */}
         <video
           autoPlay
@@ -61,7 +61,7 @@ export const Hero: React.FC<HeroProps> = ({ onExplore, onBookConsultation, onSel
           muted
           playsInline
           preload="auto"
-          className="absolute inset-0 lg:relative w-full h-full lg:h-auto object-cover object-center lg:block m-0 p-0 border-0"
+          className="absolute inset-0 md:relative w-full h-full md:h-auto md:aspect-video object-cover block m-0 p-0 border-0"
         >
           <source
             src="https://res.cloudinary.com/damd6xdts/video/upload/v1789783682/Diamond_ring_rising_from_box_20260919045126_nbzhf0.mp4"

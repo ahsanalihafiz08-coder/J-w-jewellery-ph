@@ -227,3 +227,33 @@ html, body, .no-scrollbar, .carousel-no-scrollbar, .overflow-x-auto, .overflow-x
     -webkit-backdrop-filter: none !important;
   }
 }
+
+/* Mobile Hero Height */
+@media (max-width: 768px) {
+  .hero-media-container {
+    min-height: 85vh !important;
+    min-height: 100dvh !important;
+  }
+}
+
+/* Desktop Hero Height Fix & Scroll Optimization */
+@media (min-width: 769px) {
+  section:has(video), .hero-section {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    min-height: unset !important;
+    height: auto !important;
+  }
+
+  .hero-media-container video {
+    aspect-ratio: 16 / 9 !important;
+    object-fit: cover !important;
+  }
+
+  .backdrop-blur-md, .backdrop-blur-lg, .backdrop-blur-sm {
+    backdrop-filter: none !important;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+  }
+}
