@@ -15,7 +15,7 @@ export const ExperienceStory: React.FC = () => {
             {/* Left/Main Editorial Image with Soft Warm Grading */}
             <div className="lg:col-span-6 relative overflow-hidden h-[340px] sm:h-[400px] lg:h-full">
               <img
-                src="https://i.ibb.co/G4Njvpgh/Sapphire-ring-in-velvet-box-20260918200537.jpg"
+                src="https://i.ibb.co/YBrnPGxD/Sapphire-ring-in-velvet-box-20260918200537.jpg"
                 alt="Sapphire ring in velvet box - Jewellery That Becomes Part of Your Story by j w jewellery ph official"
                 className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
                 loading="lazy"
