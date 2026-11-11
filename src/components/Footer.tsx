@@ -27,7 +27,7 @@ export const Footer: React.FC = () => {
   };
 
   const standardWhatsAppUrl = getWhatsAppUrl(
-    'Hello j w jewellery ph official, I would like to inquire about your collections.'
+    'Hello JWA by Madeleine, I would like to inquire about your collections.'
   );
 
   return (
@@ -44,16 +44,16 @@ export const Footer: React.FC = () => {
                 className="w-10 h-10 rounded-full aspect-square border border-[#C8A870] flex items-center justify-center bg-[#FDFBF7] shadow-xs shrink-0"
                 style={{ borderRadius: '50%' }}
               >
-                <span className="font-serif text-[#C8A870] text-sm font-bold tracking-normal uppercase leading-none select-none text-center">
-                  JW
+                <span className="font-serif text-[#C8A870] text-xs font-bold tracking-normal uppercase leading-none select-none text-center">
+                  JWA
                 </span>
               </div>
               <div className="flex flex-col">
                 <span className="font-serif text-lg sm:text-xl font-medium tracking-[0.16em] text-[#3A2E26] uppercase leading-tight">
-                  JW JEWELLERY
+                  JWA
                 </span>
                 <span className="text-[9px] uppercase tracking-[0.32em] text-[#8C6D3B] font-semibold leading-none mt-0.5">
-                  PH OFFICIAL
+                  BY MADELEINE
                 </span>
               </div>
             </div>
@@ -73,7 +73,7 @@ export const Footer: React.FC = () => {
                 ))}
               </div>
               <span className="font-semibold text-[#4A3D35]">5.0 Customer Rating</span>
-              <span className="text-[#9A887C]">• Ortigas Ave, Pasig City</span>
+              <span className="text-[#9A887C]">• Los Angeles, CA</span>
             </div>
 
             {/* Clean Icon Links Only */}
@@ -83,7 +83,7 @@ export const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-8 h-8 rounded-full bg-[#25D366] text-white flex items-center justify-center hover:scale-105 transition-transform shadow-xs"
-                title="WhatsApp Official (+63 917 888 0708)"
+                title={`WhatsApp Official (${BUSINESS_INFO.phone})`}
                 aria-label="Official WhatsApp"
               >
                 <WhatsAppIcon className="w-4 h-4" />
@@ -119,7 +119,7 @@ export const Footer: React.FC = () => {
               <a
                 href={`tel:${BUSINESS_INFO.phoneClean}`}
                 className="w-8 h-8 rounded-full bg-[#C8A870] text-[#FAF8F5] flex items-center justify-center hover:scale-105 transition-transform"
-                title="Direct Call (+63 917 888 0708)"
+                title={`Direct Call (${BUSINESS_INFO.phone})`}
                 aria-label="Direct Phone"
               >
                 <Phone className="w-4 h-4" />
@@ -186,7 +186,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Bar with Copyright and Back to Top */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#9A887C]">
           <div>
-            © {new Date().getFullYear()} {BUSINESS_INFO.name}. All rights reserved. Ortigas Ave, Pasig, Metro Manila.
+            © {new Date().getFullYear()} {BUSINESS_INFO.name}. All rights reserved. 550 S Hill St, Los Angeles, CA.
           </div>
 
           <div className="flex items-center gap-6">

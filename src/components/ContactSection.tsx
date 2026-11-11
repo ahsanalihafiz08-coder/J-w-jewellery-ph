@@ -25,7 +25,7 @@ export const ContactSection: React.FC = () => {
   };
 
   const standardWhatsAppUrl = getWhatsAppUrl(
-    'Hello j w jewellery ph official, I would like to inquire about your jewellery atelier in Pasig.'
+    'Hello JWA by Madeleine, I would like to inquire about your jewellery atelier in Los Angeles.'
   );
 
   return (
@@ -42,7 +42,7 @@ export const ContactSection: React.FC = () => {
           </h2>
           <div className="w-16 h-[1px] bg-[#C8A870] mx-auto my-3" />
           <p className="text-sm sm:text-base text-[#6B5A4E]">
-            We invite you to reach out for personalized advice, design inquiries, and bespoke consultations in Pasig.
+            We invite you to reach out for personalized advice, design inquiries, and bespoke consultations in Los Angeles.
           </p>
         </div>
 

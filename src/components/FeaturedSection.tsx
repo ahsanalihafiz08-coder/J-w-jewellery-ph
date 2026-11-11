@@ -88,7 +88,7 @@ export const FeaturedSection: React.FC<FeaturedSectionProps> = ({
 
           <div className="text-xs uppercase tracking-widest text-[#9A887C] border-l-2 border-[#C8A870] pl-4 py-1">
             Bespoke Consultation <br />
-            <span className="text-[#5E4E45] font-medium">Ortigas Ave, Pasig Atelier</span>
+            <span className="text-[#5E4E45] font-medium">Los Angeles Showroom</span>
           </div>
         </div>
 
@@ -130,15 +130,13 @@ export const FeaturedSection: React.FC<FeaturedSectionProps> = ({
                     onClick={(e) => handleCardClick(e, product)}
                   >
                     <img
+                      loading="eager"
+                      fetchPriority="high"
+                      decoding="sync"
                       src={product.image}
-                      alt={`${product.name} presentation by j w jewellery ph official`}
+                      alt={`${product.name} presentation by JWA by Madeleine`}
                       className="w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
-                      loading="lazy"
-                      decoding="async"
                       referrerPolicy="no-referrer"
-                      onError={(e) => {
-                        e.currentTarget.src = 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80';
-                      }}
                     />
 
                     {/* Category Badge */}

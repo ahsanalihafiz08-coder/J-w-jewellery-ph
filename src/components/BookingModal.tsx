@@ -23,7 +23,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, product, onC
     phone: '',
     date: '',
     timeSlot: '2:00 PM - 3:30 PM',
-    consultationType: 'In-Person Atelier Visit (Pasig)',
+    consultationType: 'In-Person Atelier Visit (Los Angeles)',
     notes: '',
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -104,6 +104,9 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, product, onC
           {product && (
             <div className="p-4 rounded-xl bg-[#FDFBF7] border border-[#E2D7C7] flex items-center gap-4">
               <img
+                loading="eager"
+                fetchPriority="high"
+                decoding="sync"
                 src={product.image}
                 alt={product.name}
                 className="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-lg border border-[#E8DFC8] shrink-0"
@@ -245,8 +248,8 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, product, onC
                   onChange={(e) => setFormData({ ...formData, consultationType: e.target.value })}
                   className="w-full px-4 py-2.5 bg-[#FAF8F5] border border-[#DFCBB5] rounded-xl text-sm text-[#3A2E26] focus:outline-none focus:border-[#C8A870]"
                 >
-                  <option value="In-Person Atelier Visit (Pasig)">
-                    Private Atelier Viewing • Ortigas Ave, Pasig City
+                  <option value="In-Person Atelier Visit (Los Angeles)">
+                    Private Atelier Viewing • 550 S Hill St Ste 1238, Los Angeles, CA
                   </option>
                   <option value="Virtual Private Video Consultation">
                     Virtual HD Video Consultation (Zoom / WhatsApp Video)

@@ -72,10 +72,10 @@ export const TrustSection: React.FC = () => {
           <div className="bg-[#FDFBF7] p-6 rounded-sm border border-[#E2D7C7] space-y-2.5">
             <div className="flex items-center gap-2 text-[#8C6D3B]">
               <CheckCircle2 className="w-4 h-4 text-[#C8A870]" />
-              <h4 className="font-serif text-base font-medium text-[#3A2E26]">Local Pasig Presence</h4>
+              <h4 className="font-serif text-base font-medium text-[#3A2E26]">Downtown Los Angeles Atelier</h4>
             </div>
             <p className="text-xs text-[#786458] leading-relaxed">
-              Proudly serving patrons across Pasig and Metro Manila with direct, responsive communication.
+              Proudly serving patrons at 550 S Hill St and across California with dedicated, responsive communication.
             </p>
           </div>
         </div>

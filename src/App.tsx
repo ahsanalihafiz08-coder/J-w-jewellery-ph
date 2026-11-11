@@ -10,6 +10,7 @@ import { GallerySection } from './components/GallerySection';
 import { TrustSection } from './components/TrustSection';
 import { CtaSection } from './components/CtaSection';
 import { ContactSection } from './components/ContactSection';
+import { StoreLocationMap } from './components/StoreLocationMap';
 import { Footer } from './components/Footer';
 import { ProductModal } from './components/ProductModal';
 import { LightboxModal } from './components/LightboxModal';
@@ -73,7 +74,7 @@ export default function App() {
               handleOpenBooking({
                 id: 'hero-bespoke',
                 name: 'Bespoke Atelier Consultation',
-                image: 'https://i.ibb.co/Vp0GR86p/Gold-wedding-band-with-diamonds-20260919043310.jpg',
+                image: '/images/Gold-wedding-band-with-diamonds-20260919043310_1.jpg',
                 category: 'Bespoke Bridal & Fine Jewellery',
                 price: 'Complimentary Consultation',
               })
@@ -117,9 +118,12 @@ export default function App() {
 
           {/* 11. CONTACT SECTION WITH OFFICIAL CHANNELS & FORM */}
           <ContactSection />
+
+          {/* 12. STORE LOCATION & INTERACTIVE GOOGLE MAP (LOS ANGELES ATELIER) */}
+          <StoreLocationMap />
         </main>
 
-        {/* 12. FOOTER WITH CLEAN ICON LINKS ONLY */}
+        {/* 13. FOOTER WITH CLEAN ICON LINKS ONLY */}
         <Footer />
 
         {/* FIXED FLOATING WIDGETS (OFFICIAL WHATSAPP, CALL, AI ASSISTANT CHATBOT) */}

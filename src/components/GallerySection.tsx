@@ -49,14 +49,13 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ onOpenLightbox }
                 {/* Image Frame with Aspect Ratio */}
                 <div className="relative aspect-[4/3] overflow-hidden bg-[#EFE8DE]">
                   <img
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="sync"
                     src={item.image}
-                    alt={`${item.title} by j w jewellery ph official`}
+                    alt={`${item.title} by JWA by Madeleine`}
                     className="w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
-                    loading="lazy"
                     referrerPolicy="no-referrer"
-                    onError={(e) => {
-                      e.currentTarget.src = 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80';
-                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#3A2E26]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>

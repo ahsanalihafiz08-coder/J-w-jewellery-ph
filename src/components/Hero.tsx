@@ -22,7 +22,7 @@ export const Hero: React.FC<HeroProps> = ({ onExplore, onBookConsultation, onSel
       name: card.title,
       category: card.category,
       subtitle: 'Atelier Signature Creation',
-      description: `Handcrafted ${card.title.toLowerCase()} forged with 18K solid Philippine gold and hand-selected certified diamonds, individually curated at our Pasig atelier.`,
+      description: `Handcrafted ${card.title.toLowerCase()} forged with 18K solid gold and hand-selected certified diamonds, individually curated at our Los Angeles atelier.`,
       metal: '18K Solid Philippine Gold',
       finishing: 'Artisanal Mirror & Satin Luster',
       price: '₱48,000',
@@ -78,7 +78,7 @@ export const Hero: React.FC<HeroProps> = ({ onExplore, onBookConsultation, onSel
           {/* Luxury Atelier Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/40 border border-[#DFBE82]/50 text-[#F5EFEB] text-[10px] sm:text-xs tracking-[0.25em] uppercase font-medium shadow-sm mb-4 sm:mb-6">
             <Sparkles className="w-3.5 h-3.5 text-[#DFBE82]" />
-            <span>Official Fine Jewellery Atelier • Pasig City</span>
+            <span>Official Fine Jewellery Atelier • Los Angeles, CA</span>
           </div>
 
           {/* Main Hero Title */}
@@ -163,15 +163,13 @@ export const Hero: React.FC<HeroProps> = ({ onExplore, onBookConsultation, onSel
                   {/* Image Frame */}
                   <div className="relative h-44 sm:h-48 overflow-hidden bg-[#EFE8DE] shrink-0">
                     <img
+                      loading="eager"
+                      fetchPriority="high"
+                      decoding="sync"
                       src={card.image}
                       alt={card.title}
                       className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
-                      loading="lazy"
-                      decoding="async"
                       referrerPolicy="no-referrer"
-                      onError={(e) => {
-                        e.currentTarget.src = 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80';
-                      }}
                     />
 
                     {/* Category Pill */}

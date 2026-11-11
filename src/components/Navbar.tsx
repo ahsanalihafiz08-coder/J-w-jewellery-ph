@@ -53,14 +53,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenChat }) => 
   };
 
   const whatsappUrl = getWhatsAppUrl(
-    'Hello j w jewellery ph official, I would like to inquire about your fine jewellery collections.'
+    'Hello JWA by Madeleine, I would like to inquire about your fine jewellery collections.'
   );
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out gpu-layer ${
         isScrolled
-          ? 'bg-[#FAF8F5]/95 backdrop-blur-md shadow-[0_4px_20px_rgba(120,100,88,0.12)] border-b border-[#E8DFC8]'
+          ? 'bg-[#FAF8F5] shadow-[0_4px_20px_rgba(120,100,88,0.12)] border-b border-[#E8DFC8]'
           : 'bg-transparent border-b border-transparent'
       }`}
     >
@@ -74,37 +74,37 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenChat }) => 
               handleLinkClick('#hero');
             }}
             className="group flex items-center gap-2 sm:gap-3 focus:outline-none shrink-0"
-            aria-label="JW Jewellery PH Official Home"
+            aria-label="JWA by Madeleine Home"
           >
-            {/* High-contrast circular frame with clear inner JW text */}
+            {/* High-contrast circular frame with clear inner JWA text */}
             <div
               className="w-8 h-8 sm:w-10 sm:h-10 rounded-full aspect-square border border-[#DFBE82] flex items-center justify-center bg-[#241C16] shadow-sm shrink-0 group-hover:border-[#C8A870] transition-all"
               style={{ borderRadius: '50%' }}
             >
-              <span className="font-serif text-[#DFBE82] text-[12px] sm:text-sm font-bold tracking-wider uppercase leading-none select-none text-center">
-                JW
+              <span className="font-serif text-[#DFBE82] text-[11px] sm:text-xs font-bold tracking-wider uppercase leading-none select-none text-center">
+                JWA
               </span>
             </div>
 
             {/* Balanced Proportional Brand Name with High Contrast */}
             <div className="flex flex-col">
               <span
-                className={`font-serif text-sm sm:text-base md:text-lg font-medium tracking-[0.12em] sm:tracking-[0.16em] uppercase transition-colors group-hover:text-[#DFBE82] leading-tight ${
+                className={`font-serif text-sm sm:text-base md:text-lg font-medium tracking-[0.14em] sm:tracking-[0.18em] uppercase transition-colors group-hover:text-[#DFBE82] leading-tight ${
                   isScrolled
                     ? 'text-[#3A2E26]'
                     : 'text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]'
                 }`}
               >
-                JW JEWELLERY
+                JWA
               </span>
               <span
-                className={`text-[7.5px] sm:text-[9px] uppercase tracking-[0.24em] sm:tracking-[0.32em] font-semibold leading-none mt-0.5 ${
+                className={`text-[7.5px] sm:text-[9px] uppercase tracking-[0.24em] sm:tracking-[0.3em] font-semibold leading-none mt-0.5 ${
                   isScrolled
                     ? 'text-[#8C6D3B]'
                     : 'text-[#DFBE82] drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]'
                 }`}
               >
-                PH OFFICIAL
+                BY MADELEINE
               </span>
             </div>
           </a>
@@ -215,7 +215,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenChat }) => 
 
             {/* 2. WhatsApp Button */}
             <a
-              href={getWhatsAppUrl("Hello! I would like to inquire about fine jewellery creations at j w jewellery ph official.")}
+              href={getWhatsAppUrl("Hello! I would like to inquire about fine jewellery creations at JWA by Madeleine.")}
               target="_blank"
               rel="noopener noreferrer"
               className="h-11 px-1.5 sm:px-3 rounded-full bg-gradient-to-r from-[#C8A870] via-[#DFBE82] to-[#C8A870] hover:from-[#B89458] hover:to-[#B89458] border border-[#C8A870] text-[#3A2E26] text-[10px] sm:text-xs uppercase tracking-tight sm:tracking-wider font-semibold shadow-xs flex items-center justify-center gap-1 sm:gap-1.5 transition-all active:scale-95 whitespace-nowrap min-w-0"

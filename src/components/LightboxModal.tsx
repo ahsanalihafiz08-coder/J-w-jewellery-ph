@@ -44,7 +44,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
   if (!item) return null;
 
   const whatsappInquiryUrl = getWhatsAppUrl(
-    `Hello j w jewellery ph official, I am admiring the gallery piece "${item.title}" (${item.category}). Could you provide more details?`
+    `Hello JWA by Madeleine, I am admiring the gallery piece "${item.title}" (${item.category}). Could you provide more details?`
   );
 
   const wishlisted = isWishlisted(item.id);
@@ -126,6 +126,9 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
         {/* High-res Image Showcase */}
         <div className="relative bg-[#EFE8DE] max-h-[55vh] overflow-hidden flex items-center justify-center">
           <img
+            loading="eager"
+            fetchPriority="high"
+            decoding="sync"
             src={item.image}
             alt={item.title}
             className="w-full h-full max-h-[55vh] object-contain object-center"

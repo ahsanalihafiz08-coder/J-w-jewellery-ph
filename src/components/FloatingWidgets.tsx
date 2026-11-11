@@ -8,7 +8,7 @@ export const FloatingWidgets: React.FC = () => {
   const [chatMessages, setChatMessages] = useState<Array<{ sender: 'bot' | 'user'; text: string; time: string }>>([
     {
       sender: 'bot',
-      text: 'Mabuhay! Welcome to the Atelier AI Concierge for j w jewellery ph official in Pasig. How may I assist you with bespoke designs, store hours, pricing, bookings, or product specifications today?',
+      text: 'Welcome to the Atelier Concierge for JWA by Madeleine in Los Angeles. How may I assist you with bespoke designs, showroom hours, appointments, pricing, or product specifications today?',
       time: 'Just now',
     },
   ]);
@@ -66,21 +66,21 @@ export const FloatingWidgets: React.FC = () => {
       const lower = text.toLowerCase();
 
       if (lower.includes('custom') || lower.includes('bespoke') || lower.includes('engrave') || lower.includes('tailor')) {
-        reply = '✨ Bespoke Custom Design: We craft one-of-a-kind engagement rings and wedding bands. Our process includes personalized sketch consultations, 3D CAD modeling, and hand-finishing in solid 18K gold. You can select your diamond carat, cut, and setting. Would you like to consult directly with our master jeweler on WhatsApp (+63 917 888 0708)?';
+        reply = `✨ Bespoke Custom Design: We craft one-of-a-kind engagement rings and wedding bands. Our process includes personalized sketch consultations, 3D CAD modeling, and hand-finishing in solid 18K gold. You can select your diamond carat, cut, and setting. Would you like to consult directly with our master jeweler on WhatsApp (${BUSINESS_INFO.phone})?`;
       } else if (lower.includes('hour') || lower.includes('time') || lower.includes('open') || lower.includes('schedule') || lower.includes('day')) {
-        reply = `🕒 Atelier Hours: We are open Monday to Saturday from 10:00 AM – 7:00 PM. Sundays are reserved for private VIP appointments. Located along Ortigas Ave, Pasig City, Metro Manila.`;
+        reply = `🕒 Atelier Hours: We are open Monday to Saturday from 10:00 AM – 7:00 PM. Sundays are reserved for private VIP appointments. Located at ${BUSINESS_INFO.address}.`;
       } else if (lower.includes('price') || lower.includes('cost') || lower.includes('how much') || lower.includes('quote') || lower.includes('rate')) {
-        reply = '💎 Pricing Overview: Our signature fine rings and earrings range from ₱28,500 to ₱75,000+. Bespoke bridal and high-carat solitaire rings are priced transparently based on current gold weight and diamond specifications. We offer zero retail markup directly from our Pasig atelier.';
+        reply = '💎 Pricing Overview: Our signature fine rings and earrings range from ₱28,500 to ₱75,000+. Bespoke bridal and high-carat solitaire rings are priced transparently based on current gold weight and diamond specifications. We offer zero retail markup directly from our Los Angeles atelier.';
       } else if (lower.includes('book') || lower.includes('appointment') || lower.includes('view') || lower.includes('visit') || lower.includes('consult')) {
-        reply = '📅 Book a Viewing: You can book a complimentary private viewing consultation at our Ortigas, Pasig atelier! Click the "Book Consultation" button on the site, or message us directly on WhatsApp (+63 917 888 0708) with your preferred date and time.';
+        reply = `📅 Book a Viewing: You can book a complimentary private viewing consultation at our Los Angeles atelier! Click the "Book Consultation" button on the site, or message us directly on WhatsApp (${BUSINESS_INFO.phone}) with your preferred date and time.`;
       } else if (lower.includes('spec') || lower.includes('gold') || lower.includes('karat') || lower.includes('diamond') || lower.includes('gem') || lower.includes('metal') || lower.includes('material')) {
-        reply = '🔍 Product Specs & Materials: We work exclusively with solid 18K Philippine Yellow Gold, White Gold, and Rose Gold (75% pure gold alloyed for superior heirloom durability). All diamonds are certified, hand-selected for brilliance, paired with genuine natural rubies, emeralds, sapphires, and fire opals.';
-      } else if (lower.includes('location') || lower.includes('address') || lower.includes('where') || lower.includes('pasig') || lower.includes('ortigas')) {
-        reply = `📍 Atelier Location: ${BUSINESS_INFO.address}. Conveniently situated along Ortigas Avenue, Pasig, Metro Manila. Valet and secure parking are available upon arrival.`;
+        reply = '🔍 Product Specs & Materials: We work exclusively with solid 18K Yellow Gold, White Gold, and Rose Gold (75% pure gold alloyed for superior heirloom durability). All diamonds are certified, hand-selected for brilliance, paired with genuine natural rubies, emeralds, sapphires, and fire opals.';
+      } else if (lower.includes('location') || lower.includes('address') || lower.includes('where') || lower.includes('la') || lower.includes('angeles')) {
+        reply = `📍 Atelier Location: ${BUSINESS_INFO.address}. Conveniently situated in downtown Los Angeles. Valet and secure parking are available upon arrival.`;
       } else if (lower.includes('whatsapp') || lower.includes('contact') || lower.includes('phone') || lower.includes('call') || lower.includes('number')) {
-        reply = `📞 Direct Contact: Reach our atelier via phone or WhatsApp at ${BUSINESS_INFO.phone} (+63 917 888 0708), or email us at ${BUSINESS_INFO.email}.`;
+        reply = `📞 Direct Contact: Reach our atelier via phone or WhatsApp at ${BUSINESS_INFO.phone}, or email us at ${BUSINESS_INFO.email}.`;
       } else {
-        reply = `Thank you for asking! At ${BUSINESS_INFO.name}, we provide handcrafted 18K fine jewellery, bespoke bridal sets, and private consultations in Ortigas, Pasig. How else may I assist you with custom orders, appointments, or product details?`;
+        reply = `Thank you for asking! At ${BUSINESS_INFO.name}, we provide handcrafted 18K fine jewellery, bespoke bridal sets, and private consultations at our Los Angeles showroom. How else may I assist you with custom orders, appointments, or product details?`;
       }
 
       setChatMessages((prev) => [
@@ -91,7 +91,7 @@ export const FloatingWidgets: React.FC = () => {
   };
 
   const whatsappConciergeUrl = getWhatsAppUrl(
-    'Hello j w jewellery ph official, I would like to inquire about your fine jewellery atelier.'
+    'Hello JWA by Madeleine, I would like to inquire about your fine jewellery atelier.'
   );
 
   return (
@@ -204,7 +204,7 @@ export const FloatingWidgets: React.FC = () => {
               className="inline-flex items-center justify-center gap-1.5 text-[11px] text-[#128C7E] font-medium hover:underline"
             >
               <WhatsAppIcon className="w-3.5 h-3.5" />
-              <span>Connect directly on WhatsApp (+63 917 888 0708)</span>
+              <span>Connect directly on WhatsApp ({BUSINESS_INFO.phone})</span>
               <ArrowRight className="w-3 h-3" />
             </a>
           </div>
@@ -221,7 +221,7 @@ export const FloatingWidgets: React.FC = () => {
           id="floating-whatsapp-widget"
           className="w-11 h-11 sm:w-12 sm:h-12 rounded-full aspect-square bg-[#25D366] hover:bg-[#20bd5a] text-white flex items-center justify-center shadow-[0_4px_16px_rgba(37,211,102,0.4)] hover:shadow-[0_6px_24px_rgba(37,211,102,0.55)] transition-all duration-300 hover:scale-108 active:scale-95 border border-[#1ebd56]"
           style={{ borderRadius: '50%' }}
-          title="WhatsApp Concierge (+63 917 888 0708)"
+          title={`WhatsApp Concierge (${BUSINESS_INFO.phone})`}
           aria-label="WhatsApp Concierge"
         >
           <WhatsAppIcon className="w-5 h-5 text-white" />
@@ -233,7 +233,7 @@ export const FloatingWidgets: React.FC = () => {
           id="floating-call-widget"
           className="w-11 h-11 sm:w-12 sm:h-12 rounded-full aspect-square bg-[#FAF8F5] hover:bg-[#F5EFEB] text-[#785E38] hover:text-[#3A2E26] border border-[#C8A870] flex items-center justify-center shadow-[0_4px_16px_rgba(120,100,88,0.2)] hover:shadow-[0_6px_24px_rgba(120,100,88,0.32)] transition-all duration-300 hover:scale-108 active:scale-95"
           style={{ borderRadius: '50%' }}
-          title="Direct Call Atelier (+63 917 888 0708)"
+          title={`Direct Call Atelier (${BUSINESS_INFO.phone})`}
           aria-label="Call Atelier"
         >
           <Phone className="w-5 h-5 text-[#8C6D3B]" />

@@ -71,14 +71,13 @@ export const CollectionsSection: React.FC<CollectionsSectionProps> = ({
                 {/* Clean Image Preview */}
                 <div className="relative aspect-[4/3] overflow-hidden bg-[#EFE8DE] shrink-0">
                   <img
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="sync"
                     src={collection.image}
-                    alt={`${collection.name} by j w jewellery ph official`}
+                    alt={`${collection.name} by JWA by Madeleine`}
                     className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
-                    loading="lazy"
                     referrerPolicy="no-referrer"
-                    onError={(e) => {
-                      e.currentTarget.src = 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80';
-                    }}
                   />
 
                   {/* Minimal Subtle Category Identifier */}

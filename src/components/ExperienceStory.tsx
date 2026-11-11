@@ -15,10 +15,12 @@ export const ExperienceStory: React.FC = () => {
             {/* Left/Main Editorial Image with Soft Warm Grading */}
             <div className="lg:col-span-6 relative overflow-hidden h-[340px] sm:h-[400px] lg:h-full">
               <img
-                src="https://i.ibb.co/YBrnPGxD/Sapphire-ring-in-velvet-box-20260918200537.jpg"
-                alt="Sapphire ring in velvet box - Jewellery That Becomes Part of Your Story by j w jewellery ph official"
+                loading="eager"
+                fetchPriority="high"
+                decoding="sync"
+                src="/images/Sapphire-ring-in-velvet-box-20260918200537.jpg"
+                alt="Sapphire ring in velvet box - Jewellery That Becomes Part of Your Story by JWA by Madeleine"
                 className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
-                loading="lazy"
                 referrerPolicy="no-referrer"
               />
               {/* Soft champagne & rose gold tinted overlay */}

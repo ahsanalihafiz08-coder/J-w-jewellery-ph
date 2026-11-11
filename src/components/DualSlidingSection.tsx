@@ -23,7 +23,7 @@ export const DualSlidingSection: React.FC<DualSlidingSectionProps> = ({ onSelect
       name: card.title,
       category: card.tag,
       subtitle: 'Atelier Archive Masterpiece',
-      description: `Bespoke handcrafted creation featuring ${card.title.toLowerCase()}. Forged in certified 18K Philippine gold with precision diamond and gemstone mounts at our Pasig atelier.`,
+      description: `Bespoke handcrafted creation featuring ${card.title.toLowerCase()}. Forged in certified 18K gold with precision diamond and gemstone mounts at our Los Angeles atelier.`,
       metal: '18K Solid Gold',
       finishing: 'High-Polish Luster',
       price: '₱42,000 - ₱95,000',
@@ -102,15 +102,13 @@ export const DualSlidingSection: React.FC<DualSlidingSectionProps> = ({ onSelect
                   {/* Image Frame */}
                   <div className="relative h-40 sm:h-44 overflow-hidden bg-[#EFE8DE] shrink-0">
                     <img
+                      loading="eager"
+                      fetchPriority="high"
+                      decoding="sync"
                       src={card.image}
                       alt={card.title}
                       className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
-                      loading="lazy"
-                      decoding="async"
                       referrerPolicy="no-referrer"
-                      onError={(e) => {
-                        e.currentTarget.src = 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80';
-                      }}
                     />
                     <div className="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-[#FAF8F5]/95 text-[9.5px] uppercase tracking-wider text-[#786458] border border-[#E8DFC8] font-medium shadow-xs">
                       {card.tag}
@@ -186,15 +184,13 @@ export const DualSlidingSection: React.FC<DualSlidingSectionProps> = ({ onSelect
                   {/* Image Frame */}
                   <div className="relative h-40 sm:h-44 overflow-hidden bg-[#EFE8DE] shrink-0">
                     <img
+                      loading="eager"
+                      fetchPriority="high"
+                      decoding="sync"
                       src={card.image}
                       alt={card.title}
                       className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
-                      loading="lazy"
-                      decoding="async"
                       referrerPolicy="no-referrer"
-                      onError={(e) => {
-                        e.currentTarget.src = 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80';
-                      }}
                     />
                     <div className="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-[#FAF8F5]/95 text-[9.5px] uppercase tracking-wider text-[#786458] border border-[#E8DFC8] font-medium shadow-xs">
                       {card.tag}

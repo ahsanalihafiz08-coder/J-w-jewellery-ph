@@ -94,6 +94,9 @@ export const WishlistDrawer: React.FC<WishlistDrawerProps> = ({ onBookItem, onEx
                   className="p-3.5 rounded-xl bg-[#FDFBF7] border border-[#E2D7C7] hover:border-[#C8A870] transition-all flex gap-3 relative group"
                 >
                   <img
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="sync"
                     src={item.image}
                     alt={item.name}
                     className="w-20 h-20 rounded-lg object-cover bg-[#EFE8DE] border border-[#E8DFC8] shrink-0"

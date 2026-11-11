@@ -144,13 +144,13 @@ export const ProductModal: React.FC<ProductModalProps> = ({
             {/* Image Preview */}
             <div className="relative aspect-square rounded-xl overflow-hidden bg-[#EFE8DE] border border-[#E2D7C7]">
               <img
+                loading="eager"
+                fetchPriority="high"
+                decoding="sync"
                 src={image}
                 alt={title}
                 className="w-full h-full object-cover object-center"
                 referrerPolicy="no-referrer"
-                onError={(e) => {
-                  e.currentTarget.src = 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80';
-                }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#3A2E26]/25 via-transparent to-transparent pointer-events-none" />
               {price && (
@@ -203,7 +203,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
               {/* Assurance strip */}
               <div className="flex items-center gap-2 text-[11px] text-[#786458] bg-[#F5EFEB] p-3 rounded-xl border border-[#E8DFC8]">
                 <ShieldCheck className="w-4 h-4 text-[#C8A870] shrink-0" />
-                <span>Custom tailored sizing & 18K solid gold finishing crafted at our Pasig atelier.</span>
+                <span>Custom tailored sizing & 18K solid gold finishing crafted at our Los Angeles showroom.</span>
               </div>
             </div>
           </div>

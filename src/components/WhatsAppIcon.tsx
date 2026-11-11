@@ -19,5 +19,5 @@ export const WhatsAppIcon: React.FC<WhatsAppIconProps> = ({ className = 'w-5 h-5
 };
 
 export const getWhatsAppUrl = (message: string) => {
-  return `https://wa.me/639178880708?text=${encodeURIComponent(message)}`;
+  return `https://wa.me/13234852881?text=${encodeURIComponent(message)}`;
 };

@@ -21,10 +21,12 @@ export const AboutSection: React.FC = () => {
               {/* Main Image */}
               <div className="relative z-10 rounded-sm overflow-hidden bg-[#FAF8F5] shadow-[0_8px_30px_rgba(120,100,88,0.08)] border border-[#EADBCE]">
                 <img
-                  src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1200&auto=format&fit=crop"
-                  alt="Fine jewellery crafting and delicate gold styling at j w jewellery ph official"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="sync"
+                  src="/images/about-atelier-crafting.jpg"
+                  alt="Fine jewellery crafting and delicate gold styling at JWA by Madeleine"
                   className="w-full h-[420px] sm:h-[500px] object-cover object-center transition-transform duration-700 hover:scale-103"
-                  loading="lazy"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#4A3D35]/30 via-transparent to-transparent pointer-events-none" />
@@ -77,7 +79,7 @@ export const AboutSection: React.FC = () => {
                 Every ring, necklace, earring, and bracelet is selected and finished with patient dedication to proportion, balance, and radiance. We cherish the quiet alchemy of lustrous precious metals and brilliantly cut gems—shaping pieces that effortlessly accompany both daily rituals and extraordinary milestones.
               </p>
               <p>
-                Nestled along Ortigas Avenue in Pasig, our approach centers on a warm, personal, and unhurried consultation experience, allowing each client to find jewellery that resonates deeply with their individual journey.
+                Situated at 550 S Hill St in downtown Los Angeles, our approach centers on a warm, personal, and unhurried consultation experience, allowing each client to find jewellery that resonates deeply with their individual journey.
               </p>
             </div>
 
@@ -106,7 +108,7 @@ export const AboutSection: React.FC = () => {
 
             {/* Sub-signature text */}
             <div className="pt-2 flex items-center justify-between text-xs text-[#9A887C]">
-              <span>Ortigas Ave, Pasig City</span>
+              <span>550 S Hill St, Los Angeles, CA</span>
               <span className="font-serif italic text-sm text-[#786458]">Curated for Life’s Memories</span>
             </div>
 
