@@ -16,7 +16,7 @@ export const StoreLocationMap: React.FC = () => {
             <div className="space-y-2">
               <div className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.25em] text-[#8C6D3B] font-semibold">
                 <MapPin className="w-3.5 h-3.5 text-[#C8A870]" />
-                <span>Visit Our Los Angeles Atelier</span>
+                <span>Visit Our Miami Showroom</span>
               </div>
               <h3 className="font-serif text-2xl sm:text-3xl text-[#3A2E26]">
                 {BUSINESS_INFO.name} Atelier & Showroom
@@ -51,7 +51,7 @@ export const StoreLocationMap: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 mt-6 border-t border-[#EADBCE] text-xs text-[#6B5A4E]">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-[#C8A870]" />
-              <span>Suite 1238, 12th Floor Jewelry Exchange</span>
+              <span>Downtown Miami Jewelry District</span>
             </div>
             <div className="flex items-center gap-2">
               <Clock className="w-3.5 h-3.5 text-[#C8A870] shrink-0" />
@@ -67,7 +67,7 @@ export const StoreLocationMap: React.FC = () => {
         {/* Interactive Google Map iframe */}
         <div className="relative w-full h-[280px] sm:h-[320px] md:h-[200px] rounded-2xl overflow-hidden border border-[#DFCBB5] shadow-[0_12px_40px_rgba(120,100,88,0.1)] bg-[#EFE8DE]">
           <iframe
-            title="JWA by Madeleine Store Location Map - 550 S Hill St, Los Angeles, CA"
+            title="Jewelry Martin Store Location Map - 36 NE 1st St, Miami, FL"
             src={mapIframeSrc}
             width="100%"
             height="100%"

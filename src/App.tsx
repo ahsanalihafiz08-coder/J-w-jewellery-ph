@@ -110,7 +110,7 @@ export default function App() {
             onOpenLightbox={(item) => setSelectedGalleryItem(item)}
           />
 
-          {/* 9. CUSTOMER TRUST / 5.0 STAR RATING */}
+          {/* 9. CUSTOMER TRUST / 4.5 (25 REVIEWS) RATING */}
           <TrustSection />
 
           {/* 10. CALL-TO-ACTION SECTION WITH PILL-SHAPED BUTTONS */}

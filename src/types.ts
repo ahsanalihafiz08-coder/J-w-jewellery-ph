@@ -37,3 +37,11 @@ export interface FeatureItem {
   title: string;
   description: string;
 }
+
+export interface ReviewItem {
+  id: string;
+  reviewer: string;
+  rating: number;
+  time: string;
+  review: string;
+}

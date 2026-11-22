@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, MapPin, Mail, Send, Clock, Sparkles, Check, Copy, Instagram, Facebook } from 'lucide-react';
+import { Phone, MapPin, Send, Clock, Sparkles, Check, Copy, Instagram } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/jewelleryData';
 import { WhatsAppIcon, getWhatsAppUrl } from './WhatsAppIcon';
 
@@ -25,7 +25,7 @@ export const ContactSection: React.FC = () => {
   };
 
   const standardWhatsAppUrl = getWhatsAppUrl(
-    'Hello JWA by Madeleine, I would like to inquire about your jewellery atelier in Los Angeles.'
+    'Hello Jewelry Martin, I would like to inquire about your jewellery showroom in Miami.'
   );
 
   return (
@@ -42,7 +42,7 @@ export const ContactSection: React.FC = () => {
           </h2>
           <div className="w-16 h-[1px] bg-[#C8A870] mx-auto my-3" />
           <p className="text-sm sm:text-base text-[#6B5A4E]">
-            We invite you to reach out for personalized advice, design inquiries, and bespoke consultations in Los Angeles.
+            We invite you to reach out for personalized advice, design inquiries, and bespoke consultations in Miami.
           </p>
         </div>
 
@@ -106,32 +106,28 @@ export const ContactSection: React.FC = () => {
                   </span>
                 </a>
 
-                {/* 3. Instagram & Facebook Links */}
-                <div className="grid grid-cols-2 gap-3">
-                  <a
-                    href={BUSINESS_INFO.instagramUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 p-2.5 rounded-2xl bg-[#FAF8F5] border border-[#DFCBB5] hover:border-[#C8A870] transition-colors text-xs text-[#5E4E45] group"
-                  >
-                    <div className="w-7 h-7 rounded-full bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF] text-white flex items-center justify-center shrink-0">
-                      <Instagram className="w-3.5 h-3.5" />
-                    </div>
-                    <span className="truncate font-medium group-hover:text-[#B38E50]">Instagram</span>
-                  </a>
-
-                  <a
-                    href={BUSINESS_INFO.facebookUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 p-2.5 rounded-2xl bg-[#FAF8F5] border border-[#DFCBB5] hover:border-[#C8A870] transition-colors text-xs text-[#5E4E45] group"
-                  >
-                    <div className="w-7 h-7 rounded-full bg-[#1877F2] text-white flex items-center justify-center shrink-0">
-                      <Facebook className="w-3.5 h-3.5" />
-                    </div>
-                    <span className="truncate font-medium group-hover:text-[#B38E50]">Facebook</span>
-                  </a>
-                </div>
+                {/* 3. Instagram Official Link */}
+                <a
+                  href={BUSINESS_INFO.instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-3 sm:p-3.5 rounded-2xl bg-[#FAF8F5] border border-[#DFCBB5] hover:border-[#C8A870] transition-colors text-xs text-[#5E4E45] group"
+                >
+                  <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF] text-white flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                    <Instagram className="w-4 h-4" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <span className="text-[10px] uppercase tracking-[0.18em] text-[#9A887C] font-semibold block">
+                      Official Social
+                    </span>
+                    <span className="text-xs text-[#5E4E45] block font-medium group-hover:text-[#B38E50]">
+                      Follow Jewelry Martin on Instagram
+                    </span>
+                  </div>
+                  <span className="text-xs font-semibold text-[#8C6D3B] group-hover:underline pr-1 whitespace-nowrap">
+                    Follow →
+                  </span>
+                </a>
 
                 {/* 4. Atelier Address */}
                 <div className="flex items-start gap-3.5 p-3 rounded-2xl bg-[#FAF8F5] border border-[#DFCBB5]">
@@ -233,7 +229,7 @@ export const ContactSection: React.FC = () => {
                         required
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        placeholder="+63 9XX XXX XXXX"
+                        placeholder="+1 (305) XXX-XXXX"
                         className="w-full px-4 py-3 bg-[#FAF8F5] border border-[#DFCBB5] rounded-xl text-sm text-[#3A2E26] focus:outline-none focus:border-[#C8A870] transition-colors"
                       />
                     </div>

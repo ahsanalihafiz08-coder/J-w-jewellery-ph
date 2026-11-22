@@ -8,7 +8,7 @@ export const FloatingWidgets: React.FC = () => {
   const [chatMessages, setChatMessages] = useState<Array<{ sender: 'bot' | 'user'; text: string; time: string }>>([
     {
       sender: 'bot',
-      text: 'Welcome to the Atelier Concierge for JWA by Madeleine in Los Angeles. How may I assist you with bespoke designs, showroom hours, appointments, pricing, or product specifications today?',
+      text: 'Welcome to the Atelier Concierge for Jewelry Martin in Miami. How may I assist you with bespoke designs, showroom hours, appointments, pricing, or product specifications today?',
       time: 'Just now',
     },
   ]);
@@ -70,17 +70,17 @@ export const FloatingWidgets: React.FC = () => {
       } else if (lower.includes('hour') || lower.includes('time') || lower.includes('open') || lower.includes('schedule') || lower.includes('day')) {
         reply = `🕒 Atelier Hours: We are open Monday to Saturday from 10:00 AM – 7:00 PM. Sundays are reserved for private VIP appointments. Located at ${BUSINESS_INFO.address}.`;
       } else if (lower.includes('price') || lower.includes('cost') || lower.includes('how much') || lower.includes('quote') || lower.includes('rate')) {
-        reply = '💎 Pricing Overview: Our signature fine rings and earrings range from ₱28,500 to ₱75,000+. Bespoke bridal and high-carat solitaire rings are priced transparently based on current gold weight and diamond specifications. We offer zero retail markup directly from our Los Angeles atelier.';
+        reply = '💎 Pricing Overview: Our signature fine rings and earrings range from ₱28,500 to ₱75,000+. Bespoke bridal and high-carat solitaire rings are priced transparently based on current gold weight and diamond specifications. We offer zero retail markup directly from our Miami showroom.';
       } else if (lower.includes('book') || lower.includes('appointment') || lower.includes('view') || lower.includes('visit') || lower.includes('consult')) {
-        reply = `📅 Book a Viewing: You can book a complimentary private viewing consultation at our Los Angeles atelier! Click the "Book Consultation" button on the site, or message us directly on WhatsApp (${BUSINESS_INFO.phone}) with your preferred date and time.`;
+        reply = `📅 Book a Viewing: You can book a complimentary private viewing consultation at our Miami showroom! Click the "Book Consultation" button on the site, or message us directly on WhatsApp (${BUSINESS_INFO.phone}) with your preferred date and time.`;
       } else if (lower.includes('spec') || lower.includes('gold') || lower.includes('karat') || lower.includes('diamond') || lower.includes('gem') || lower.includes('metal') || lower.includes('material')) {
         reply = '🔍 Product Specs & Materials: We work exclusively with solid 18K Yellow Gold, White Gold, and Rose Gold (75% pure gold alloyed for superior heirloom durability). All diamonds are certified, hand-selected for brilliance, paired with genuine natural rubies, emeralds, sapphires, and fire opals.';
-      } else if (lower.includes('location') || lower.includes('address') || lower.includes('where') || lower.includes('la') || lower.includes('angeles')) {
-        reply = `📍 Atelier Location: ${BUSINESS_INFO.address}. Conveniently situated in downtown Los Angeles. Valet and secure parking are available upon arrival.`;
+      } else if (lower.includes('location') || lower.includes('address') || lower.includes('where') || lower.includes('miami') || lower.includes('fl')) {
+        reply = `📍 Atelier Location: ${BUSINESS_INFO.address}. Conveniently situated in Downtown Miami. Valet and secure parking are available upon arrival.`;
       } else if (lower.includes('whatsapp') || lower.includes('contact') || lower.includes('phone') || lower.includes('call') || lower.includes('number')) {
-        reply = `📞 Direct Contact: Reach our atelier via phone or WhatsApp at ${BUSINESS_INFO.phone}, or email us at ${BUSINESS_INFO.email}.`;
+        reply = `📞 Direct Contact: Reach our showroom via phone or WhatsApp at ${BUSINESS_INFO.phone}.`;
       } else {
-        reply = `Thank you for asking! At ${BUSINESS_INFO.name}, we provide handcrafted 18K fine jewellery, bespoke bridal sets, and private consultations at our Los Angeles showroom. How else may I assist you with custom orders, appointments, or product details?`;
+        reply = `Thank you for asking! At ${BUSINESS_INFO.name}, we provide handcrafted 18K fine jewellery, bespoke bridal sets, and private consultations at our Miami showroom. How else may I assist you with custom orders, appointments, or product details?`;
       }
 
       setChatMessages((prev) => [
@@ -91,7 +91,7 @@ export const FloatingWidgets: React.FC = () => {
   };
 
   const whatsappConciergeUrl = getWhatsAppUrl(
-    'Hello JWA by Madeleine, I would like to inquire about your fine jewellery atelier.'
+    'Hello Jewelry Martin, I would like to inquire about your fine jewellery showroom.'
   );
 
   return (
@@ -109,7 +109,7 @@ export const FloatingWidgets: React.FC = () => {
                 <h4 className="font-serif text-sm font-medium tracking-wide">Atelier AI Concierge</h4>
                 <div className="flex items-center gap-1.5 text-[10px] text-[#DFBE82]">
                   <span className="w-2 h-2 rounded-full bg-[#25D366] animate-pulse" />
-                  <span>Online • JW Jewellery PH</span>
+                  <span>Online • Jewelry Martin</span>
                 </div>
               </div>
             </div>

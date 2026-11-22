@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, MapPin, ArrowUp, Star, Mail, Instagram, Facebook, Clock } from 'lucide-react';
+import { Phone, MapPin, ArrowUp, Star, Instagram, Clock } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/jewelleryData';
 import { WhatsAppIcon, getWhatsAppUrl } from './WhatsAppIcon';
 
@@ -27,7 +27,7 @@ export const Footer: React.FC = () => {
   };
 
   const standardWhatsAppUrl = getWhatsAppUrl(
-    'Hello JWA by Madeleine, I would like to inquire about your collections.'
+    'Hello Jewelry Martin, I would like to inquire about your collections.'
   );
 
   return (
@@ -45,15 +45,15 @@ export const Footer: React.FC = () => {
                 style={{ borderRadius: '50%' }}
               >
                 <span className="font-serif text-[#C8A870] text-xs font-bold tracking-normal uppercase leading-none select-none text-center">
-                  JWA
+                  JM
                 </span>
               </div>
               <div className="flex flex-col">
                 <span className="font-serif text-lg sm:text-xl font-medium tracking-[0.16em] text-[#3A2E26] uppercase leading-tight">
-                  JWA
+                  JEWELRY MARTIN
                 </span>
                 <span className="text-[9px] uppercase tracking-[0.32em] text-[#8C6D3B] font-semibold leading-none mt-0.5">
-                  BY MADELEINE
+                  FINE JEWELLERY
                 </span>
               </div>
             </div>
@@ -63,17 +63,23 @@ export const Footer: React.FC = () => {
             </p>
 
             <p className="text-xs text-[#786458] leading-relaxed max-w-md">
-              A refined Philippine fine jewellery atelier dedicated to timeless design, classical proportions, and enduring brilliance for life’s most celebrated chapters.
+              A refined Downtown Miami fine jewellery boutique dedicated to timeless design, classical proportions, and enduring brilliance for life’s most celebrated chapters.
             </p>
 
             <div className="flex items-center gap-1.5 text-xs text-[#8C6D3B] pt-1">
               <div className="flex text-[#C8A870]">
-                {[...Array(5)].map((_, i) => (
+                {[...Array(4)].map((_, i) => (
                   <Star key={i} className="w-3.5 h-3.5 fill-[#C8A870] stroke-[#B89458]" />
                 ))}
+                <span className="relative inline-block w-3.5 h-3.5">
+                  <Star className="w-3.5 h-3.5 stroke-[#B89458]" />
+                  <span className="absolute inset-0 overflow-hidden w-1/2">
+                    <Star className="w-3.5 h-3.5 fill-[#C8A870] stroke-[#B89458]" />
+                  </span>
+                </span>
               </div>
-              <span className="font-semibold text-[#4A3D35]">5.0 Customer Rating</span>
-              <span className="text-[#9A887C]">• Los Angeles, CA</span>
+              <span className="font-semibold text-[#4A3D35]">4.5 (25 reviews)</span>
+              <span className="text-[#9A887C]">• Miami, FL</span>
             </div>
 
             {/* Clean Icon Links Only */}
@@ -97,24 +103,6 @@ export const Footer: React.FC = () => {
                 aria-label="Instagram"
               >
                 <Instagram className="w-4 h-4" />
-              </a>
-              <a
-                href={BUSINESS_INFO.facebookUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-[#1877F2] text-white flex items-center justify-center hover:scale-105 transition-transform"
-                title="Facebook"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-4 h-4" />
-              </a>
-              <a
-                href={`mailto:${BUSINESS_INFO.email}`}
-                className="w-8 h-8 rounded-full bg-[#EA4335] text-white flex items-center justify-center hover:scale-105 transition-transform"
-                title="Email"
-                aria-label="Email Atelier"
-              >
-                <Mail className="w-4 h-4" />
               </a>
               <a
                 href={`tel:${BUSINESS_INFO.phoneClean}`}
@@ -186,7 +174,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Bar with Copyright and Back to Top */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#9A887C]">
           <div>
-            © {new Date().getFullYear()} {BUSINESS_INFO.name}. All rights reserved. 550 S Hill St, Los Angeles, CA.
+            © {new Date().getFullYear()} {BUSINESS_INFO.name}. All rights reserved. 36 NE 1st St, Miami, FL.
           </div>
 
           <div className="flex items-center gap-6">

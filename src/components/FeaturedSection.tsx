@@ -88,7 +88,7 @@ export const FeaturedSection: React.FC<FeaturedSectionProps> = ({
 
           <div className="text-xs uppercase tracking-widest text-[#9A887C] border-l-2 border-[#C8A870] pl-4 py-1">
             Bespoke Consultation <br />
-            <span className="text-[#5E4E45] font-medium">Los Angeles Showroom</span>
+            <span className="text-[#5E4E45] font-medium">Miami Showroom</span>
           </div>
         </div>
 
@@ -134,7 +134,7 @@ export const FeaturedSection: React.FC<FeaturedSectionProps> = ({
                       fetchPriority="high"
                       decoding="sync"
                       src={product.image}
-                      alt={`${product.name} presentation by JWA by Madeleine`}
+                      alt={`${product.name} presentation by Jewelry Martin`}
                       className="w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
                       referrerPolicy="no-referrer"
                     />

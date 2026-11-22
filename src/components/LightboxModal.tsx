@@ -44,7 +44,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
   if (!item) return null;
 
   const whatsappInquiryUrl = getWhatsAppUrl(
-    `Hello JWA by Madeleine, I am admiring the gallery piece "${item.title}" (${item.category}). Could you provide more details?`
+    `Hello Jewelry Martin, I am admiring the gallery piece "${item.title}" (${item.category}). Could you provide more details?`
   );
 
   const wishlisted = isWishlisted(item.id);

@@ -203,7 +203,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
               {/* Assurance strip */}
               <div className="flex items-center gap-2 text-[11px] text-[#786458] bg-[#F5EFEB] p-3 rounded-xl border border-[#E8DFC8]">
                 <ShieldCheck className="w-4 h-4 text-[#C8A870] shrink-0" />
-                <span>Custom tailored sizing & 18K solid gold finishing crafted at our Los Angeles showroom.</span>
+                <span>Custom tailored sizing & 18K solid gold finishing crafted at our Miami showroom.</span>
               </div>
             </div>
           </div>

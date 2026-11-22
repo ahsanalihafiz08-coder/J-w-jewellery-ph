@@ -1,6 +1,6 @@
 import React from 'react';
-import { Star, ShieldCheck, Heart, Sparkles, CheckCircle2 } from 'lucide-react';
-import { BUSINESS_INFO } from '../data/jewelleryData';
+import { Star, ShieldCheck, Heart, Sparkles, CheckCircle2, Quote } from 'lucide-react';
+import { BUSINESS_INFO, CLIENT_REVIEWS } from '../data/jewelleryData';
 
 export const TrustSection: React.FC = () => {
   return (
@@ -8,28 +8,34 @@ export const TrustSection: React.FC = () => {
       {/* Delicate background ambient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] rounded-full [background:radial-gradient(ellipse,rgba(243,232,219,0.4)_0%,transparent_70%)] pointer-events-none" />
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         
         {/* Subtle Section Label */}
         <div className="inline-flex items-center justify-center gap-2 text-xs uppercase tracking-[0.3em] text-[#8C6D3B] font-semibold mb-4">
           <Sparkles className="w-3.5 h-3.5 text-[#C8A870]" />
-          <span>Client Satisfaction</span>
+          <span>Client Reviews & Satisfaction</span>
         </div>
 
-        {/* 5.0 Star Prominent Presentation (strictly matching requirement) */}
+        {/* 4.5 (25 reviews) Star Prominent Presentation */}
         <div className="space-y-4 max-w-2xl mx-auto">
           <div className="flex items-center justify-center gap-2 text-[#C8A870]">
-            {[...Array(5)].map((_, i) => (
+            {[...Array(4)].map((_, i) => (
               <Star key={i} className="w-6 sm:w-7 h-6 sm:h-7 fill-[#C8A870] stroke-[#B89458]" />
             ))}
+            <span className="relative inline-block w-6 sm:w-7 h-6 sm:h-7">
+              <Star className="w-6 sm:w-7 h-6 sm:h-7 stroke-[#B89458]" />
+              <span className="absolute inset-0 overflow-hidden w-1/2">
+                <Star className="w-6 sm:w-7 h-6 sm:h-7 fill-[#C8A870] stroke-[#B89458]" />
+              </span>
+            </span>
           </div>
 
           <div className="space-y-1">
             <div className="font-serif text-5xl sm:text-6xl font-light text-[#3A2E26] tracking-tight">
-              5.0 ★
+              4.5 ★
             </div>
             <p className="text-xs sm:text-sm uppercase tracking-[0.25em] text-[#8C6D3B] font-semibold">
-              Customer Rating
+              4.5 (25 reviews)
             </p>
           </div>
         </div>
@@ -37,7 +43,7 @@ export const TrustSection: React.FC = () => {
         {/* Delicate Gold Divider */}
         <div className="w-20 h-[1px] bg-[#C8A870] mx-auto my-8" />
 
-        {/* Trust-Focused Copy (Strictly as specified: "Beautiful jewellery deserves a beautiful experience.") */}
+        {/* Trust-Focused Copy */}
         <div className="max-w-2xl mx-auto space-y-4">
           <blockquote className="font-serif text-2xl sm:text-3xl md:text-4xl text-[#3A2E26] font-light italic leading-snug">
             “Beautiful jewellery deserves a beautiful experience.”
@@ -47,8 +53,52 @@ export const TrustSection: React.FC = () => {
           </p>
         </div>
 
+        {/* Continuous Smooth Sliding Reviews Carousel (3 Cards Side-by-Side on Desktop) */}
+        <div className="mt-12 w-full overflow-hidden relative">
+          <div className="animate-reviews-marquee flex items-stretch gap-5 xl:gap-6 pr-5 xl:pr-6 py-2">
+            {[...CLIENT_REVIEWS, ...CLIENT_REVIEWS].map((item, idx) => (
+              <article
+                key={`${item.id}-${idx}`}
+                className="w-[280px] sm:w-[320px] lg:w-[306px] xl:w-[346px] shrink-0 bg-[#FDFBF7] p-6 rounded-sm border border-[#E2D7C7] shadow-[0_4px_20px_rgba(120,100,88,0.06)] flex flex-col justify-between text-left"
+              >
+                <div className="space-y-3.5">
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="flex items-center gap-1 text-[#C8A870]" aria-label={`${item.rating} out of 5 stars`}>
+                      {[...Array(item.rating)].map((_, starIdx) => (
+                        <Star
+                          key={starIdx}
+                          className="w-4 h-4 fill-[#C8A870] stroke-[#B89458]"
+                        />
+                      ))}
+                    </div>
+                    <span className="text-[11px] uppercase tracking-wider text-[#9A887C] font-medium">
+                      {item.time}
+                    </span>
+                  </div>
+
+                  <p className="text-sm text-[#5E4E45] leading-relaxed">
+                    “{item.review}”
+                  </p>
+                </div>
+
+                <div className="pt-4 mt-5 border-t border-[#EFE8DE] flex items-center justify-between gap-2">
+                  <div>
+                    <h4 className="font-serif text-base font-medium text-[#3A2E26] leading-snug">
+                      {item.reviewer}
+                    </h4>
+                    <span className="text-[10px] uppercase tracking-[0.18em] text-[#8C6D3B] font-semibold">
+                      Verified Review
+                    </span>
+                  </div>
+                  <Quote className="w-4 h-4 text-[#C8A870]/70 shrink-0" />
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+
         {/* Three Trust Pillars */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
           <div className="bg-[#FDFBF7] p-6 rounded-sm border border-[#E2D7C7] space-y-2.5">
             <div className="flex items-center gap-2 text-[#8C6D3B]">
               <ShieldCheck className="w-4 h-4 text-[#C8A870]" />
@@ -72,10 +122,10 @@ export const TrustSection: React.FC = () => {
           <div className="bg-[#FDFBF7] p-6 rounded-sm border border-[#E2D7C7] space-y-2.5">
             <div className="flex items-center gap-2 text-[#8C6D3B]">
               <CheckCircle2 className="w-4 h-4 text-[#C8A870]" />
-              <h4 className="font-serif text-base font-medium text-[#3A2E26]">Downtown Los Angeles Atelier</h4>
+              <h4 className="font-serif text-base font-medium text-[#3A2E26]">Downtown Miami Showroom</h4>
             </div>
             <p className="text-xs text-[#786458] leading-relaxed">
-              Proudly serving patrons at 550 S Hill St and across California with dedicated, responsive communication.
+              Proudly serving patrons at 36 NE 1st St and across Florida with dedicated, responsive communication.
             </p>
           </div>
         </div>

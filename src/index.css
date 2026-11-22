@@ -111,6 +111,21 @@ html, body, .no-scrollbar, .carousel-no-scrollbar, .overflow-x-auto, .overflow-x
   animation-play-state: paused;
 }
 
+.animate-reviews-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll-left 36s linear infinite;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.animate-reviews-marquee:hover {
+  animation-play-state: paused;
+}
+
 /* Layout containment on marquee cards to isolate rendering cost without layer explosion */
 .animate-marquee-left > *,
 .animate-marquee-right > * {

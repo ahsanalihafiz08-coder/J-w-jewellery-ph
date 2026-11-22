@@ -1,21 +1,64 @@
-import { CollectionItem, FeaturedProduct, GalleryItem, FeatureItem } from '../types';
+import { CollectionItem, FeaturedProduct, GalleryItem, FeatureItem, ReviewItem } from '../types';
 
 export const BUSINESS_INFO = {
-  name: 'JWA by Madeleine',
+  name: 'Jewelry Martin',
   tagline: 'Timeless elegance for every meaningful moment.',
-  phone: '+1 (323) 485-2881',
-  phoneClean: '+13234852881',
-  whatsappUrl: 'https://wa.me/13234852881',
-  instagramUrl: 'https://www.instagram.com/jw.jewelleryph?stkn=NnJuand1NWV6eTFk',
-  facebookUrl: 'https://www.facebook.com/jw.jewelleryph',
-  email: 'jwjewellery.ph@gmail.com',
-  address: '550 S Hill St Ste 1238, Los Angeles, CA 90013, United States',
-  locationCity: 'Los Angeles, CA',
+  phone: '+1 (305) 987-6487',
+  phoneClean: '+13059876487',
+  whatsappUrl: 'https://wa.me/13059876487',
+  instagramUrl: 'https://www.instagram.com/jewelry.martin?knvt=NXJuOWowZHg4ZG91',
+  address: '36 NE 1st St, Miami, FL 33132, United States',
+  locationCity: 'Miami, FL',
   hours: 'Mon – Sat: 10:00 AM – 7:00 PM | Sun: By Appointment',
-  rating: '5.0',
+  rating: '4.5',
   ratingLabel: 'Customer Rating',
-  ratingCountNotice: 'Verified 5.0 Star Patron Rating',
+  ratingCountNotice: '4.5 (25 reviews)',
 };
+
+export const CLIENT_REVIEWS: ReviewItem[] = [
+  {
+    id: 'review-1',
+    reviewer: 'Rodrigo Pintos',
+    rating: 5,
+    time: '4 years ago',
+    review: 'Great service and very good pricing Have bought a few items from here would strongly recommend Its a pleasure to deal with them',
+  },
+  {
+    id: 'review-2',
+    reviewer: 'Sk7D - Skyian7D',
+    rating: 5,
+    time: '4 years ago',
+    review: 'Wonderful customer service, best prices and gave me free shipping. Excellent variety also!',
+  },
+  {
+    id: 'review-3',
+    reviewer: 'Andy椰子',
+    rating: 5,
+    time: '3 years ago',
+    review: 'Good service. I receive my order quickly. The Chains that I bought are more beautiful that I imagine.',
+  },
+  {
+    id: 'review-4',
+    reviewer: 'Raffi Gechidjian',
+    rating: 5,
+    time: '4 years ago',
+    review: 'Great customer service. 10/10 will recommend',
+  },
+  {
+    id: 'review-5',
+    reviewer: 'Pablo Martin Gechidjian',
+    rating: 5,
+    time: '4 years ago',
+    review: 'Great pieces and pricing!! and the customer service is fantastic!',
+  },
+  {
+    id: 'review-6',
+    reviewer: 'TANIA RD',
+    rating: 5,
+    time: '4 years ago',
+    review: 'The best 18k prices in Downtown Miami!',
+  },
+];
 
 // Exact 22 Cards for Hero Horizontal Carousel / Marquee
 export const HERO_CAROUSEL_CARDS = [
@@ -650,7 +693,7 @@ export const FEATURED_JEWELRY_CARDS: FeaturedProduct[] = [
     name: 'Gold Chain Necklace with Atelier Charm',
     category: 'Necklaces',
     subtitle: 'Signature Boutique Emblem',
-    description: 'Handcrafted gold charm engraved with the authentic JWA by Madeleine monogram on a lustrous wheat chain.',
+    description: 'Handcrafted gold charm engraved with the authentic Jewelry Martin monogram on a lustrous wheat chain.',
     metal: '18K Yellow Gold',
     finishing: 'Wheat Chain & Engraved Disc',
     price: '₱29,000',

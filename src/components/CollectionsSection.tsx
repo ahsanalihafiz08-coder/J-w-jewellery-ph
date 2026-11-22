@@ -75,7 +75,7 @@ export const CollectionsSection: React.FC<CollectionsSectionProps> = ({
                     fetchPriority="high"
                     decoding="sync"
                     src={collection.image}
-                    alt={`${collection.name} by JWA by Madeleine`}
+                    alt={`${collection.name} by Jewelry Martin`}
                     className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
                     referrerPolicy="no-referrer"
                   />

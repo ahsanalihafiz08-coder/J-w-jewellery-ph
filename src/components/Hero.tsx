@@ -22,7 +22,7 @@ export const Hero: React.FC<HeroProps> = ({ onExplore, onBookConsultation, onSel
       name: card.title,
       category: card.category,
       subtitle: 'Atelier Signature Creation',
-      description: `Handcrafted ${card.title.toLowerCase()} forged with 18K solid gold and hand-selected certified diamonds, individually curated at our Los Angeles atelier.`,
+      description: `Handcrafted ${card.title.toLowerCase()} forged with 18K solid gold and hand-selected certified diamonds, individually curated at our Miami showroom.`,
       metal: '18K Solid Philippine Gold',
       finishing: 'Artisanal Mirror & Satin Luster',
       price: '₱48,000',
@@ -78,7 +78,7 @@ export const Hero: React.FC<HeroProps> = ({ onExplore, onBookConsultation, onSel
           {/* Luxury Atelier Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/40 border border-[#DFBE82]/50 text-[#F5EFEB] text-[10px] sm:text-xs tracking-[0.25em] uppercase font-medium shadow-sm mb-4 sm:mb-6">
             <Sparkles className="w-3.5 h-3.5 text-[#DFBE82]" />
-            <span>Official Fine Jewellery Atelier • Los Angeles, CA</span>
+            <span>Official Fine Jewellery Atelier • Miami, FL</span>
           </div>
 
           {/* Main Hero Title */}

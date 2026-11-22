@@ -25,7 +25,7 @@ export const AboutSection: React.FC = () => {
                   fetchPriority="high"
                   decoding="sync"
                   src="/images/about-atelier-crafting.jpg"
-                  alt="Fine jewellery crafting and delicate gold styling at JWA by Madeleine"
+                  alt="Fine jewellery crafting and delicate gold styling at Jewelry Martin"
                   className="w-full h-[420px] sm:h-[500px] object-cover object-center transition-transform duration-700 hover:scale-103"
                   referrerPolicy="no-referrer"
                 />
@@ -79,7 +79,7 @@ export const AboutSection: React.FC = () => {
                 Every ring, necklace, earring, and bracelet is selected and finished with patient dedication to proportion, balance, and radiance. We cherish the quiet alchemy of lustrous precious metals and brilliantly cut gems—shaping pieces that effortlessly accompany both daily rituals and extraordinary milestones.
               </p>
               <p>
-                Situated at 550 S Hill St in downtown Los Angeles, our approach centers on a warm, personal, and unhurried consultation experience, allowing each client to find jewellery that resonates deeply with their individual journey.
+                Situated at 36 NE 1st St in Downtown Miami, our approach centers on a warm, personal, and unhurried consultation experience, allowing each client to find jewellery that resonates deeply with their individual journey.
               </p>
             </div>
 
@@ -108,7 +108,7 @@ export const AboutSection: React.FC = () => {
 
             {/* Sub-signature text */}
             <div className="pt-2 flex items-center justify-between text-xs text-[#9A887C]">
-              <span>550 S Hill St, Los Angeles, CA</span>
+              <span>36 NE 1st St, Miami, FL</span>
               <span className="font-serif italic text-sm text-[#786458]">Curated for Life’s Memories</span>
             </div>
 

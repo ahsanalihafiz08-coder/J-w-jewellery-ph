@@ -23,7 +23,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, product, onC
     phone: '',
     date: '',
     timeSlot: '2:00 PM - 3:30 PM',
-    consultationType: 'In-Person Atelier Visit (Los Angeles)',
+    consultationType: 'In-Person Showroom Visit (Miami)',
     notes: '',
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -248,8 +248,8 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, product, onC
                   onChange={(e) => setFormData({ ...formData, consultationType: e.target.value })}
                   className="w-full px-4 py-2.5 bg-[#FAF8F5] border border-[#DFCBB5] rounded-xl text-sm text-[#3A2E26] focus:outline-none focus:border-[#C8A870]"
                 >
-                  <option value="In-Person Atelier Visit (Los Angeles)">
-                    Private Atelier Viewing • 550 S Hill St Ste 1238, Los Angeles, CA
+                  <option value="In-Person Showroom Visit (Miami)">
+                    Private Showroom Viewing • 36 NE 1st St, Miami, FL
                   </option>
                   <option value="Virtual Private Video Consultation">
                     Virtual HD Video Consultation (Zoom / WhatsApp Video)

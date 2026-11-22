@@ -23,7 +23,7 @@ export const DualSlidingSection: React.FC<DualSlidingSectionProps> = ({ onSelect
       name: card.title,
       category: card.tag,
       subtitle: 'Atelier Archive Masterpiece',
-      description: `Bespoke handcrafted creation featuring ${card.title.toLowerCase()}. Forged in certified 18K gold with precision diamond and gemstone mounts at our Los Angeles atelier.`,
+      description: `Bespoke handcrafted creation featuring ${card.title.toLowerCase()}. Forged in certified 18K gold with precision diamond and gemstone mounts at our Miami showroom.`,
       metal: '18K Solid Gold',
       finishing: 'High-Polish Luster',
       price: '₱42,000 - ₱95,000',
