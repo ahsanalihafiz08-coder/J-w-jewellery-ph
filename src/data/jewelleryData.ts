@@ -1,12 +1,14 @@
 import { CollectionItem, FeaturedProduct, GalleryItem, FeatureItem, ReviewItem } from '../types';
 
 export const BUSINESS_INFO = {
-  name: 'Jewelry Martin',
+  name: 'Alexandra moreno luxury jeweler',
   tagline: 'Timeless elegance for every meaningful moment.',
-  phone: '+1 (305) 987-6487',
-  phoneClean: '+13059876487',
-  whatsappUrl: 'https://wa.me/13059876487',
-  instagramUrl: 'https://www.instagram.com/jewelry.martin?knvt=NXJuOWowZHg4ZG91',
+  phone: '+1 (305) 606-8804',
+  phoneClean: '+13056068804',
+  whatsappUrl: 'https://wa.me/13056068804',
+  instagramUrl: 'https://www.instagram.com/getacarat?cnvx=YWZtMjY3ZjA2ZzZy',
+  facebookUrl: 'https://www.facebook.com/getacarat',
+  email: 'Alexandramoren566@ymail.com',
   address: '36 NE 1st St, Miami, FL 33132, United States',
   locationCity: 'Miami, FL',
   hours: 'Mon – Sat: 10:00 AM – 7:00 PM | Sun: By Appointment',
@@ -693,7 +695,7 @@ export const FEATURED_JEWELRY_CARDS: FeaturedProduct[] = [
     name: 'Gold Chain Necklace with Atelier Charm',
     category: 'Necklaces',
     subtitle: 'Signature Boutique Emblem',
-    description: 'Handcrafted gold charm engraved with the authentic Jewelry Martin monogram on a lustrous wheat chain.',
+    description: 'Handcrafted gold charm engraved with the authentic Alexandra moreno luxury jeweler monogram on a lustrous wheat chain.',
     metal: '18K Yellow Gold',
     finishing: 'Wheat Chain & Engraved Disc',
     price: '₱29,000',

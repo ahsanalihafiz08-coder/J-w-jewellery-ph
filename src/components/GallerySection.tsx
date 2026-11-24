@@ -53,7 +53,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ onOpenLightbox }
                     fetchPriority="high"
                     decoding="sync"
                     src={item.image}
-                    alt={`${item.title} by Jewelry Martin`}
+                    alt={`${item.title} by Alexandra moreno luxury jeweler`}
                     className="w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
                     referrerPolicy="no-referrer"
                   />

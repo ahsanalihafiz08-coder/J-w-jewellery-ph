@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, MapPin, Send, Clock, Sparkles, Check, Copy, Instagram } from 'lucide-react';
+import { Phone, MapPin, Send, Clock, Sparkles, Check, Copy, Instagram, Facebook, Mail } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/jewelleryData';
 import { WhatsAppIcon, getWhatsAppUrl } from './WhatsAppIcon';
 
@@ -25,7 +25,7 @@ export const ContactSection: React.FC = () => {
   };
 
   const standardWhatsAppUrl = getWhatsAppUrl(
-    'Hello Jewelry Martin, I would like to inquire about your jewellery showroom in Miami.'
+    'Hello Alexandra moreno luxury jeweler, I would like to inquire about your jewellery showroom in Miami.'
   );
 
   return (
@@ -106,28 +106,67 @@ export const ContactSection: React.FC = () => {
                   </span>
                 </a>
 
-                {/* 3. Instagram Official Link */}
+                {/* 3. Email Official Link */}
                 <a
-                  href={BUSINESS_INFO.instagramUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={`mailto:${BUSINESS_INFO.email}`}
                   className="flex items-center gap-3 p-3 sm:p-3.5 rounded-2xl bg-[#FAF8F5] border border-[#DFCBB5] hover:border-[#C8A870] transition-colors text-xs text-[#5E4E45] group"
                 >
-                  <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF] text-white flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-                    <Instagram className="w-4 h-4" />
+                  <div className="w-10 h-10 rounded-full bg-[#F5EFEB] border border-[#DFCBB5] flex items-center justify-center text-[#9A753C] shrink-0 group-hover:scale-105 transition-transform" style={{ borderRadius: '50%' }}>
+                    <Mail className="w-4 h-4 text-[#C8A870]" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <span className="text-[10px] uppercase tracking-[0.18em] text-[#9A887C] font-semibold block">
-                      Official Social
+                      Official Email
                     </span>
-                    <span className="text-xs text-[#5E4E45] block font-medium group-hover:text-[#B38E50]">
-                      Follow Jewelry Martin on Instagram
+                    <span className="text-xs text-[#5E4E45] block font-medium group-hover:text-[#B38E50] truncate">
+                      {BUSINESS_INFO.email}
                     </span>
                   </div>
                   <span className="text-xs font-semibold text-[#8C6D3B] group-hover:underline pr-1 whitespace-nowrap">
-                    Follow →
+                    Email Us →
                   </span>
                 </a>
+
+                {/* 4. Official Social Links (Instagram & Facebook) */}
+                <div className="grid grid-cols-2 gap-3">
+                  <a
+                    href={BUSINESS_INFO.instagramUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2.5 p-3 rounded-2xl bg-[#FAF8F5] border border-[#DFCBB5] hover:border-[#C8A870] transition-colors text-xs text-[#5E4E45] group"
+                  >
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF] text-white flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                      <Instagram className="w-4 h-4" />
+                    </div>
+                    <div className="min-w-0">
+                      <span className="text-[10px] uppercase tracking-wider text-[#9A887C] font-semibold block">
+                        Instagram
+                      </span>
+                      <span className="text-xs font-medium text-[#5E4E45] group-hover:text-[#B38E50] block truncate">
+                        Follow Us
+                      </span>
+                    </div>
+                  </a>
+
+                  <a
+                    href={BUSINESS_INFO.facebookUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2.5 p-3 rounded-2xl bg-[#FAF8F5] border border-[#DFCBB5] hover:border-[#C8A870] transition-colors text-xs text-[#5E4E45] group"
+                  >
+                    <div className="w-8 h-8 rounded-full bg-[#1877F2] text-white flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                      <Facebook className="w-4 h-4" />
+                    </div>
+                    <div className="min-w-0">
+                      <span className="text-[10px] uppercase tracking-wider text-[#9A887C] font-semibold block">
+                        Facebook
+                      </span>
+                      <span className="text-xs font-medium text-[#5E4E45] group-hover:text-[#B38E50] block truncate">
+                        Connect
+                      </span>
+                    </div>
+                  </a>
+                </div>
 
                 {/* 4. Atelier Address */}
                 <div className="flex items-start gap-3.5 p-3 rounded-2xl bg-[#FAF8F5] border border-[#DFCBB5]">

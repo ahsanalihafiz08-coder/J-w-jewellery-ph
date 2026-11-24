@@ -8,7 +8,7 @@ export const FloatingWidgets: React.FC = () => {
   const [chatMessages, setChatMessages] = useState<Array<{ sender: 'bot' | 'user'; text: string; time: string }>>([
     {
       sender: 'bot',
-      text: 'Welcome to the Atelier Concierge for Jewelry Martin in Miami. How may I assist you with bespoke designs, showroom hours, appointments, pricing, or product specifications today?',
+      text: 'Welcome to the Atelier Concierge for Alexandra moreno luxury jeweler in Miami. How may I assist you with bespoke designs, showroom hours, appointments, pricing, or product specifications today?',
       time: 'Just now',
     },
   ]);
@@ -77,8 +77,8 @@ export const FloatingWidgets: React.FC = () => {
         reply = '🔍 Product Specs & Materials: We work exclusively with solid 18K Yellow Gold, White Gold, and Rose Gold (75% pure gold alloyed for superior heirloom durability). All diamonds are certified, hand-selected for brilliance, paired with genuine natural rubies, emeralds, sapphires, and fire opals.';
       } else if (lower.includes('location') || lower.includes('address') || lower.includes('where') || lower.includes('miami') || lower.includes('fl')) {
         reply = `📍 Atelier Location: ${BUSINESS_INFO.address}. Conveniently situated in Downtown Miami. Valet and secure parking are available upon arrival.`;
-      } else if (lower.includes('whatsapp') || lower.includes('contact') || lower.includes('phone') || lower.includes('call') || lower.includes('number')) {
-        reply = `📞 Direct Contact: Reach our showroom via phone or WhatsApp at ${BUSINESS_INFO.phone}.`;
+      } else if (lower.includes('whatsapp') || lower.includes('contact') || lower.includes('phone') || lower.includes('call') || lower.includes('number') || lower.includes('email')) {
+        reply = `📞 Direct Contact: Reach our showroom via phone or WhatsApp at ${BUSINESS_INFO.phone}, or email us at ${BUSINESS_INFO.email}.`;
       } else {
         reply = `Thank you for asking! At ${BUSINESS_INFO.name}, we provide handcrafted 18K fine jewellery, bespoke bridal sets, and private consultations at our Miami showroom. How else may I assist you with custom orders, appointments, or product details?`;
       }
@@ -91,7 +91,7 @@ export const FloatingWidgets: React.FC = () => {
   };
 
   const whatsappConciergeUrl = getWhatsAppUrl(
-    'Hello Jewelry Martin, I would like to inquire about your fine jewellery showroom.'
+    'Hello Alexandra moreno luxury jeweler, I would like to inquire about your fine jewellery showroom.'
   );
 
   return (
@@ -109,7 +109,7 @@ export const FloatingWidgets: React.FC = () => {
                 <h4 className="font-serif text-sm font-medium tracking-wide">Atelier AI Concierge</h4>
                 <div className="flex items-center gap-1.5 text-[10px] text-[#DFBE82]">
                   <span className="w-2 h-2 rounded-full bg-[#25D366] animate-pulse" />
-                  <span>Online • Jewelry Martin</span>
+                  <span>Online • Alexandra moreno luxury jeweler</span>
                 </div>
               </div>
             </div>

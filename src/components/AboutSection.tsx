@@ -25,7 +25,7 @@ export const AboutSection: React.FC = () => {
                   fetchPriority="high"
                   decoding="sync"
                   src="/images/about-atelier-crafting.jpg"
-                  alt="Fine jewellery crafting and delicate gold styling at Jewelry Martin"
+                  alt="Fine jewellery crafting and delicate gold styling at Alexandra moreno luxury jeweler"
                   className="w-full h-[420px] sm:h-[500px] object-cover object-center transition-transform duration-700 hover:scale-103"
                   referrerPolicy="no-referrer"
                 />

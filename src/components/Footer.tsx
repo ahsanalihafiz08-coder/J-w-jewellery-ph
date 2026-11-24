@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, MapPin, ArrowUp, Star, Instagram, Clock } from 'lucide-react';
+import { Phone, MapPin, ArrowUp, Star, Instagram, Facebook, Mail, Clock } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/jewelleryData';
 import { WhatsAppIcon, getWhatsAppUrl } from './WhatsAppIcon';
 
@@ -27,7 +27,7 @@ export const Footer: React.FC = () => {
   };
 
   const standardWhatsAppUrl = getWhatsAppUrl(
-    'Hello Jewelry Martin, I would like to inquire about your collections.'
+    'Hello Alexandra moreno luxury jeweler, I would like to inquire about your collections.'
   );
 
   return (
@@ -45,15 +45,15 @@ export const Footer: React.FC = () => {
                 style={{ borderRadius: '50%' }}
               >
                 <span className="font-serif text-[#C8A870] text-xs font-bold tracking-normal uppercase leading-none select-none text-center">
-                  JM
+                  AM
                 </span>
               </div>
               <div className="flex flex-col">
                 <span className="font-serif text-lg sm:text-xl font-medium tracking-[0.16em] text-[#3A2E26] uppercase leading-tight">
-                  JEWELRY MARTIN
+                  ALEXANDRA MORENO
                 </span>
                 <span className="text-[9px] uppercase tracking-[0.32em] text-[#8C6D3B] font-semibold leading-none mt-0.5">
-                  FINE JEWELLERY
+                  LUXURY JEWELER
                 </span>
               </div>
             </div>
@@ -103,6 +103,24 @@ export const Footer: React.FC = () => {
                 aria-label="Instagram"
               >
                 <Instagram className="w-4 h-4" />
+              </a>
+              <a
+                href={BUSINESS_INFO.facebookUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full bg-[#1877F2] text-white flex items-center justify-center hover:scale-105 transition-transform shadow-xs"
+                title="Facebook"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-4 h-4" />
+              </a>
+              <a
+                href={`mailto:${BUSINESS_INFO.email}`}
+                className="w-8 h-8 rounded-full bg-[#8C6D3B] text-[#FAF8F5] flex items-center justify-center hover:scale-105 transition-transform shadow-xs"
+                title={`Email (${BUSINESS_INFO.email})`}
+                aria-label="Email"
+              >
+                <Mail className="w-4 h-4" />
               </a>
               <a
                 href={`tel:${BUSINESS_INFO.phoneClean}`}
@@ -157,6 +175,16 @@ export const Footer: React.FC = () => {
                   className="font-medium text-[#4A3D35] hover:text-[#8C6D3B] transition-colors"
                 >
                   {BUSINESS_INFO.phone}
+                </a>
+              </div>
+
+              <div className="flex items-center gap-2.5">
+                <Mail className="w-4 h-4 text-[#C8A870] shrink-0" />
+                <a
+                  href={`mailto:${BUSINESS_INFO.email}`}
+                  className="font-medium text-[#4A3D35] hover:text-[#8C6D3B] transition-colors break-all"
+                >
+                  {BUSINESS_INFO.email}
                 </a>
               </div>
 

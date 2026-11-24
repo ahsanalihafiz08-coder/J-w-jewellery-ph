@@ -134,7 +134,7 @@ export const FeaturedSection: React.FC<FeaturedSectionProps> = ({
                       fetchPriority="high"
                       decoding="sync"
                       src={product.image}
-                      alt={`${product.name} presentation by Jewelry Martin`}
+                      alt={`${product.name} presentation by Alexandra moreno luxury jeweler`}
                       className="w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
                       referrerPolicy="no-referrer"
                     />

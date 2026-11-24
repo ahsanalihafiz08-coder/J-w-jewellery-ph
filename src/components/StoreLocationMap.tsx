@@ -67,7 +67,7 @@ export const StoreLocationMap: React.FC = () => {
         {/* Interactive Google Map iframe */}
         <div className="relative w-full h-[280px] sm:h-[320px] md:h-[200px] rounded-2xl overflow-hidden border border-[#DFCBB5] shadow-[0_12px_40px_rgba(120,100,88,0.1)] bg-[#EFE8DE]">
           <iframe
-            title="Jewelry Martin Store Location Map - 36 NE 1st St, Miami, FL"
+            title="Alexandra moreno luxury jeweler Store Location Map - 36 NE 1st St, Miami, FL"
             src={mapIframeSrc}
             width="100%"
             height="100%"

@@ -19,7 +19,7 @@ export const ExperienceStory: React.FC = () => {
                 fetchPriority="high"
                 decoding="sync"
                 src="/images/Sapphire-ring-in-velvet-box-20260918200537.jpg"
-                alt="Sapphire ring in velvet box - Jewellery That Becomes Part of Your Story by Jewelry Martin"
+                alt="Sapphire ring in velvet box - Jewellery That Becomes Part of Your Story by Alexandra moreno luxury jeweler"
                 className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
                 referrerPolicy="no-referrer"
               />
